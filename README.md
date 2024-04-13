@@ -18,9 +18,10 @@ Tired of juggling tasks and losing track of your to-dos?  ToDoApp to the rescue!
 
 # Get Started:
 
-Clone the repo.
+Clone the repo.\
+Run following command on terminal:
 ```
-Run npm install
+npm install
 or
 npm i
 ```
