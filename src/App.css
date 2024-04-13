@@ -1,38 +1,153 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+*{
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+    color: #ddd;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(to bottom, darkblue, black);
+    font-family: sans-serif;
+    color: white;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+div.bg {
+    padding: 10px;
+    width: 80%;
+    max-width: 600px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    padding: 30px;
 }
 
-.App-link {
-  color: #61dafb;
+h1 {
+    margin-bottom: 30px;
+    text-align: center;
+    font-family: 'Popins-bold';
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+h1 svg {
+    height: 22px;
+    margin-right: 7px;
+    fill: #61DAFB;
+}
+
+form {
+    border: 3px solid #30313D;
+    border-radius: 10px;
+    padding: 5px;
+    display: flex;
+    margin-bottom: 20px;
+}
+
+form input[type='text'] {
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    flex: 1;
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+form button {
+    background-color: rgba(0, 0, 0, 0.3);
+    color: rgb(0, 79, 139);
+    padding: 10px 20px;
+    border: 2px solid rgb(0, 79, 139);
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: rgb(0, 79, 139);
+    color: white;
+}
+
+div.checkbox{
+    display: flex;
+    align-items: center;
+}
+
+div.task {
+    background-color: #30313D;
+    border-radius: 10px;
+    margin-top: 5px;
+    padding: 5px 9px;
+    display: flex;
+    align-items: center;
+    transition: opacity .3s linear;
+}
+
+div.task:hover {
+    background-image: linear-gradient(to bottom, rgb(0, 79, 139), black);
+}
+
+div.task svg {
+    height: 20px;
+    margin-right: 6px;
+    fill: #61DAFB;
+    display: flex;
+    align-items: center;
+}
+
+div.task.done {
+    opacity: 0.3;
+}
+
+div.task-name{
+    flex-grow: 1;
+}
+
+div.task span{
+    position: relative; 
+}
+
+div.task span::before{
+    content: '';
+    display: block;
+    width: 0;
+    height: 1px;
+    background-color: #ddd;
+    position: absolute;
+    top: 10px;
+    transition: width .1s linear;
+}
+
+div.task.done span::before{
+    width: 100%;
+}
+
+
+button.trash{
+    border: none;
+    background: none;
+    display: flex;
+    cursor: pointer;
+}
+
+button.trash svg{
+    fill: #888;
+    height: 14px;
+}
+
+
+.footer{
+    padding: 10px;
+    text-align: center;
+    font-size: small;
+    padding-top: 20px;
+    color: rgb(0, 79, 139);
 }
